@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAN-O-RAMA</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: #5ee7df;
+        font-size: 42px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #e8e7de;
+        font-weight: 100;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 80%;
+        border-radius: 15px;
+      }
+
+      p {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 10px;
+        color: #e8e7de;
+        line-height: 24px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #b490ca;
+        color: #e8e7de;
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 100ms ease-in-out;
+      }
+
+      button:hover {
+        background: #c0cd13;
+        cursor: pointer;
+      }
+     
+    span.character {
+        color: #b490ca;
+        font-weight: bold;
+}
+    span.joinUs {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+      .nickelodeon-link {
+        color: #fd7c0c;
+      }
+      .imdb-link {
+        color: #F5C517;
+      }
+      .wikipedia-link {
+        color:#0645AD;
+      }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        background: #e8e7de;
+        border-radius: 10px;
+        padding: 5px 10px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .made-by {
+        font-size: 12px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FAN-O-RAMA</h1>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/773/original/Rocko.jpeg?1617908147"
+        alt="Rocko and Friends"
+      />
+      <h2>A <strong>Rocko's Modern Life</strong> Fan Club</h2>
+      <button class="join-button">Join Our Mailing List</button>
+      <hr />
+      <p>
+        We believe that Rocko's Modern Life was the
+        <em>single greatest</em> television show of all time. This website is
+        dedicated to preserving its legacy and uniting its fanbase. 
+        <br />
+        If you love <span class="character">Rocko</span> and 
+        <span class="character">Heffer</span> and
+        <span class="character">Filburt</span> and everyone from O-Town...
+        <br /><br />
+        <span class="joinUs">Join us!</span> 
+        <br /><br />
+        Find out more about the best show of all time:
+       <ul>
+      <li>
+        <a
+          href="https://nickelodeon.fandom.com/wiki/Rocko%27s_Modern_Life"
+          target="_blank"
+          class="nickelodeon-link"
+        >
+          Nickelodeon
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.imdb.com/title/tt0106115/?ref_=nv_sr_srsg_0>Rocko's Modern Life IMDB"
+          target="_blank"
+          class="imdb-link"
+        >
+          IMDB
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://en.wikipedia.org/wiki/Rocko%27s_Modern_Life"
+          target="_blank"
+          class="wikipedia-link"
+        >
+          Wikipedia
+        </a>
+      </li>
+    </ul>
+
+      </p>
+      <p class="made-by">Made by Kate Dowd</p>
+    </div>
+    <script>
+      function join() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your e-mail address?");
+        let favorite = prompt("Who is your favorite character?");
+        
+        if (favorite === "Rocko") {
+        alert ("Thank you, " + name + "! " + favorite + " says: Welcome to FAN-O-RAMA! 🤩");
+        } else {
+        alert ("Thanks for joining, now go watch the show, " + name + "! 📺 Do it.");
+        }
+      }
+      let joinButton = document.querySelector(".join-button");
+      joinButton.addEventListener("click", join);
+    </script>
+  </body>
+</html>
